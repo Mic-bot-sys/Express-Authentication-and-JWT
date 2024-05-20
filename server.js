@@ -3,9 +3,8 @@ const app = express()
 const router = express.Router()
 const bodyParser = require("body-parser")
 const {connectToMongoDb} = require("./database/db")
-const authorRoutes = require("./routes/authorRoutes")
 const userRoutes = require("./routes/userRoutes")
-const bookRoutes = require("./routes/bookRoutes")
+const blogRoutes = require("./routes/blogRoutes")
 const multer = require('multer')()
 require("./middlewares/authMiddleware")
 
@@ -17,9 +16,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
 // This is to allow the Server to accept Data from the Postman Form Data
-app.use("/v1/author", multer.none(), authorRoutes)
 app.use("/v1/user", multer.none(), userRoutes)
-app.use("/v1/book", multer.none(), bookRoutes)
+app.use("/v1/blog", multer.none(), blogRoutes)
 
 const PORT = "8000"
 
