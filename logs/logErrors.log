@@ -1,0 +1,48 @@
+{
+  meta: {
+    req: {
+      url: '/v1/blog/get/published',
+      headers: {
+        'user-agent': 'PostmanRuntime/7.37.3',
+        accept: '*/*',
+        'postman-token': 'af1a81ed-1052-4d10-b709-2190d1d1cfc0',
+        host: 'localhost:8000',
+        'accept-encoding': 'gzip, deflate, br',
+        connection: 'keep-alive'
+      },
+      method: 'GET',
+      httpVersion: '1.1',
+      originalUrl: '/v1/blog/get/published',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 7
+  },
+  level: 'error',
+  message: 'HTTP GET /v1/blog/get/published',
+  timestamp: '2024-05-21T11:15:19.355Z'
+}
+{
+  meta: {
+    req: {
+      url: '/v1/blog/get/published',
+      headers: {
+        'user-agent': 'PostmanRuntime/7.37.3',
+        accept: '*/*',
+        'postman-token': '7a98239e-859b-4e4a-8706-9b1d80440ab0',
+        host: 'localhost:8000',
+        'accept-encoding': 'gzip, deflate, br',
+        connection: 'keep-alive'
+      },
+      method: 'GET',
+      httpVersion: '1.1',
+      originalUrl: '/v1/blog/get/published',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 1
+  },
+  level: 'error',
+  message: 'HTTP GET /v1/blog/get/published',
+  timestamp: '2024-05-21T11:15:20.375Z'
+}

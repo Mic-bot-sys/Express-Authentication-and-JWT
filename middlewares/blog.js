@@ -5,7 +5,7 @@ let blogDataSchema = yup.object().shape({
   title: yup.string().required(),
   description: yup.string().required(),
   body: yup.string().required(),
-//   age: yup.number().positive().integer().min(18).default(18)/
+  tags: yup.array().min(1, "at least 1")
 });
 
 
@@ -15,6 +15,8 @@ let editBlogDataSchema = yup.object().shape({
   title: yup.string().required(),
   description: yup.string().required(),
   body: yup.string().required(),
+  tags: yup.array().min(1, "at least 1")
+
 });
 
 

@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 require("dotenv").config()
+const dbLogger = require("../loggers/dbLogger")
 
 const MONGODB_URI = process.env.MONGODB_URI
 
@@ -8,11 +9,11 @@ function connectToMongoDb(){
     mongoose.connect(MONGODB_URI)
 
     mongoose.connection.on("connected", ()=>{
-        console.log("Connected to Mongoose Database Successfully")
+        dbLogger.info("Connected to Mongoose Database Successfully")
     })
 
     mongoose.connection.on("error", ()=>{
-        console.log("Database Connection Failed!!!")
+        dbLogger.error("Database Connection Failed!!!")
     })
 }
 

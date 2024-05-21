@@ -3,6 +3,7 @@ const app = express()
 const User = require("../models/userModel")
 const jwt = require("jsonwebtoken")
 require("dotenv")
+const userLogger = require("../loggers/userLogger")
 
 
 
@@ -10,11 +11,11 @@ require("dotenv")
 const getUsers = async (req, res) =>{
     try{
         // let users = await User.find().select("-password")
-        let users = await User.find().select({createdAt:0, updatedAt:0})
- 
+        let users = await User.find().select({createdAt:0, updatedAt:0, password:0,})
+
         if (users) return res.status(200).json(users)
     }catch(ex){
-        console.log(ex)
+        userLogger.error(ex.stack)
         return res.status(500).json({"message": "An Error Occured in the Server"})
     }
     
@@ -38,7 +39,7 @@ const loginUser = async (req, res)=>{
         return res.status(500).json({"message": "Invalid Login Credentials"})
 
     }catch(ex){
-        console.log(ex)
+        userLogger.error(ex.stack)
         return res.status(500).json({"message": "An Error Occured in the Server"})
     }
 }
@@ -60,7 +61,7 @@ const createUser = async (req, res) =>{
         
         return res.status(200).json({"message": "User Created Successfully"})
     }catch(ex){
-        console.log(ex)
+        userLogger.error(ex.stack)
         return res.status(500).json({"message": "An Error Occured in the Server"})
     }
     

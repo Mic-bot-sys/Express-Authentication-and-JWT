@@ -1,0 +1,25 @@
+{
+  meta: {
+    req: {
+      url: '/v1/user/get',
+      headers: {
+        authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY2NDYyNTFhOGQ1OGJlNzE3MjRmOTNkZCIsImVtYWlsIjoiaGFycnlAZ21haWwuY29tIn0sImlhdCI6MTcxNTg3NTk1MH0.0HHTw8TX9urJ65vk6ZOoB6pKvvlXdcQHtutPcmN1EYA',
+        'user-agent': 'PostmanRuntime/7.37.3',
+        accept: '*/*',
+        'postman-token': '4c47f330-76c9-4f67-906f-12867b8335ca',
+        host: 'localhost:8000',
+        'accept-encoding': 'gzip, deflate, br',
+        connection: 'keep-alive'
+      },
+      method: 'GET',
+      httpVersion: '1.1',
+      originalUrl: '/v1/user/get',
+      query: {}
+    },
+    res: { statusCode: 200 },
+    responseTime: 24
+  },
+  level: 'info',
+  message: 'HTTP GET /v1/user/get',
+  timestamp: '2024-05-21T10:57:35.617Z'
+}

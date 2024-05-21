@@ -6,7 +6,7 @@ var blogSchema = new mongoose.Schema({
     title:{
         type:String,
         required:true,
-        unique:false,
+        unique:true,
     },
     author:{
         type: mongoose.Schema.Types.ObjectId,
@@ -24,6 +24,7 @@ var blogSchema = new mongoose.Schema({
     },
     readCount:{
         type:Number,
+        default: 0,
         required:false,
         unique:false,
     },
@@ -32,6 +33,7 @@ var blogSchema = new mongoose.Schema({
         required:false,
         unique:false,
     },
+    tags: [{ type: String}],
     isPublished:{
         type:Boolean,
         required:false,
@@ -54,6 +56,15 @@ var blogSchema = new mongoose.Schema({
 versionKey: false});
 
 
+// Pre-save hook to convert data to lowercase before saving into the Blog database that i created
+blogSchema.pre('save', function(next) {
+    // Convert title and content to lowercase before saving
+    this.title = this.title.toLowerCase();
+    this.body = this.body.toLowerCase();
+    this.description = this.description.toLowerCase();
+    this.tags = this.tags.map(item => item.toLowerCase());
+    next();
+  });
 
 //Export the model
 module.exports = mongoose.model('Blog', blogSchema);

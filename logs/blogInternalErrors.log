@@ -1,0 +1,24 @@
+{
+  message: "TypeError: Cannot read properties of undefined (reading 'push')\n" +
+    '    at getPublishedBlogs (C:\\Development\\repos\\NODE\\BACKEND\\blogapi\\controllers\\blogController.js:26:15)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Development\\repos\\NODE\\BACKEND\\blogapi\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Development\\repos\\NODE\\BACKEND\\blogapi\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+    '    at C:\\Development\\repos\\NODE\\BACKEND\\blogapi\\node_modules\\express-rate-limit\\dist\\index.cjs:710:7\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async C:\\Development\\repos\\NODE\\BACKEND\\blogapi\\node_modules\\express-rate-limit\\dist\\index.cjs:625:5',
+  level: 'error',
+  service: 'BlogService',
+  timestamp: '2024-05-21T11:15:19.346Z'
+}
+{
+  message: "TypeError: Cannot read properties of undefined (reading 'push')\n" +
+    '    at getPublishedBlogs (C:\\Development\\repos\\NODE\\BACKEND\\blogapi\\controllers\\blogController.js:26:15)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Development\\repos\\NODE\\BACKEND\\blogapi\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Development\\repos\\NODE\\BACKEND\\blogapi\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+    '    at C:\\Development\\repos\\NODE\\BACKEND\\blogapi\\node_modules\\express-rate-limit\\dist\\index.cjs:710:7\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async C:\\Development\\repos\\NODE\\BACKEND\\blogapi\\node_modules\\express-rate-limit\\dist\\index.cjs:625:5',
+  level: 'error',
+  service: 'BlogService',
+  timestamp: '2024-05-21T11:15:20.374Z'
+}

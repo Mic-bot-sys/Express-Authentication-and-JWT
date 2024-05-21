@@ -1,31 +1,33 @@
 const express = require("express");
 const app = express()
 const router = express.Router()
+const limiter = require("../middlewares/rateLimiter")
 const authenticateToken = require("../middlewares/authenticateToken")
 const {validateEditBlogData, validateNewBlogData, validateDeleteBlogData} = require("../middlewares/validateBlogData")
-const {createBlog, getDraftBlogs, getPublishedBlogs, updateAuthorBlog, deleteAuthorBlog,  getAPublishedBlogById, getAllBlogsByAuthorId, publishABlog} = require("../controllers/blogController")
+const {createBlog, getDraftBlogs, getPublishedBlogs, searchPublishedBlogs, updateAuthorBlog, deleteAuthorBlog,  getAPublishedBlogById, getAllBlogsByAuthorId, publishABlog} = require("../controllers/blogController")
 
 
-router.get("/get", getDraftBlogs)
+router.get("/get", limiter, authenticateToken, getDraftBlogs)
  
-router.get("/get/published", getPublishedBlogs)
+router.get("/get/published", limiter, getPublishedBlogs)
 
-router.get("/get/published/:publishedBlogId", getAPublishedBlogById)
+router.get("/get/published/:publishedBlogId", limiter, getAPublishedBlogById)
 
-router.get("/get/blogs/", getAllBlogsByAuthorId)
-// router.get("/get/:state", authenticateToken, getAllBlogsByAuthorId)
+router.get("/search/", limiter, searchPublishedBlogs)
 
-router.post("/create", authenticateToken, validateNewBlogData, createBlog)
+router.get("/get/list/", limiter, authenticateToken, getAllBlogsByAuthorId)
+// router.get("/get/:state", limiter, authenticateToken, getAllBlogsByAuthorId)
 
-router.post("/edit", validateEditBlogData, updateAuthorBlog)
-// router.post("/edit", authenticateToken, validateEditBlogData, updateAuthorBlog)
+router.post("/create", limiter, authenticateToken, validateNewBlogData, createBlog)
 
-router.post("/publish/", publishABlog)
-// router.post("/publish/", authenticateToken, publishABlog)
+router.post("/edit", limiter, authenticateToken, validateEditBlogData, updateAuthorBlog)
+// router.post("/edit", limiter, authenticateToken, validateEditBlogData, updateAuthorBlog)
 
-router.delete("/delete/:blogId/:authorId", validateDeleteBlogData, deleteAuthorBlog)
-// router.delete("/delete/", authenticateToken, validateDeleteBlogData, deleteAuthorBlog)
+router.post("/publish/", limiter, authenticateToken, publishABlog)
+// router.post("/publish/", limiter, authenticateToken, publishABlog)
 
+router.delete("/delete/:blogId/:authorId", limiter, authenticateToken, validateDeleteBlogData, deleteAuthorBlog)
+// router.delete("/delete/", limiter, authenticateToken, validateDeleteBlogData, deleteAuthorBlog)
 
 
 

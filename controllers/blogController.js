@@ -1,6 +1,7 @@
 const express = require("express");
 const Blog = require("../models/blogModel")
 const mongoose = require("mongoose")
+const blogLogger = require("../loggers/blogLogger")
 
 
 
@@ -11,7 +12,7 @@ const getDraftBlogs = async (req, res) =>{
 
         if (blogs) return res.status(200).json(blogs)
     }catch(ex){
-        console.log(ex)
+        blogLogger.error(ex.stack)
         return res.status(500).json({"message": "An Error Occured in the Server"})
     }
     
@@ -47,7 +48,7 @@ const getPublishedBlogs = async (req, res) =>{
 
         if (blogs) return res.status(200).json(resObj)
     }catch(ex){
-        console.log(ex)
+        blogLogger.error(ex.stack)
         return res.status(500).json({"message": "An Error Occured in the Server"})
     }
     
@@ -60,18 +61,56 @@ const getAPublishedBlogById = async (req, res) =>{
     try{
         const publishedBlogId = req.params.publishedBlogId
         let blog = await Blog.findOne({_id: publishedBlogId, isDeleted: false, isPublished: true}).populate("author")
+        blog.readCount += 1
+        await blog.save()
 
         if (blog) return res.status(200).json(blog)
 
         return res.status(403).json({message: "This blog does not exist or has not been published"})
     }catch(ex){
-        console.log(ex)
+        blogLogger.error(ex.stack)
         return res.status(500).json({"message": "An Error Occured in the Server"})
-    }
-    
+    }    
 }
 
 
+// IMPLEMENTED
+// Search published blogs in the Database for an annonymous user
+const searchPublishedBlogs = async (req, res) =>{
+    try{
+        let blogs;
+        let searchCondition= {}
+        let sortCondition= {}
+        const {authorId, title, tags, orderby} = req.query
+
+        if(title){
+            searchCondition.title = new RegExp(title, 'i');
+        }
+        if (authorId){
+            searchCondition.author = authorId
+        }
+        if (tags){
+            searchCondition.tags =  { $in: [tags] };
+        }
+        if (orderby){
+            sortCondition =  { [orderby]: 1 };
+        }
+        
+        blogs = await Blog.find({isDeleted: false, isPublished: false, ...searchCondition}).sort(sortCondition)
+
+        const resObj = {blogs, authorId, dataAmount: blogs.length}
+
+        if (blogs) return res.status(200).json(resObj)
+
+        return res.status(403).json({message: "This blog does not exist or has not been published"})
+    }catch(ex){
+        blogLogger.error(ex.stack)
+        return res.status(500).json({"message": "An Error Occured in the Server"})
+    }    
+}
+
+
+// IMPLEMENTED
 // Get All the blogs created by an author depending on the state
 const getAllBlogsByAuthorId = async (req, res) =>{
     try{
@@ -94,7 +133,7 @@ const getAllBlogsByAuthorId = async (req, res) =>{
         }
         if (blogs) return res.status(200).json(resObj)
     }catch(ex){
-        console.log(ex)
+        blogLogger.error(ex.stack)
         return res.status(500).json({"message": "An Error Occured in the Server"})
     }
     
@@ -105,7 +144,7 @@ const getAllBlogsByAuthorId = async (req, res) =>{
 // Create a blog into the Database
 const createBlog = async (req, res) =>{
     try{
-        const {title, authorId, description, body} = req.body;
+        const {title, authorId, description, body, tags} = req.body;
         
         // This is to convert it to a mongoose  primary key Object for the User(Author) Model
         let authorObjId = new mongoose.Types.ObjectId(authorId)
@@ -114,13 +153,14 @@ const createBlog = async (req, res) =>{
             title,
             author: authorObjId,
             description,
-            body
+            body,
+            tags: tags
         })
         await blog.save()
         
         return res.status(200).json({"message": "Blog Created Successfully"})
     }catch(ex){
-        console.log(ex)
+        blogLogger.error(ex.stack)
         return res.status(500).json({"message": "An Error Occured in the Server"})
     }
     
@@ -140,7 +180,7 @@ const publishABlog = async (req, res) =>{
         
         return res.status(200).json({"message": "Blog has been published successfully!!!"})
     }catch(ex){
-        console.log(ex)
+        blogLogger.error(ex.stack)
         return res.status(500).json({"message": "An Error Occured in the Server"})
     }
 }
@@ -149,13 +189,14 @@ const publishABlog = async (req, res) =>{
 // This is to allow an author to edit the Blog created by the Author alone
 const updateAuthorBlog = async (req, res) =>{
     try{
-        const {blogId, authorId, title, description, body} = req.body;
+        const {blogId, authorId, title, description, body, tags} = req.body;
 
         let blog = await Blog.findOne({_id: blogId, isDeleted: false, author: authorId})
         if(blog){
             blog.title = title
             blog.description = description
-            blog.body = body
+            blog.body = body,
+            blog.tags = tags
             await blog.save()
             
             return res.status(200).json({"message": "Blog has been Updated successfully!!!"})
@@ -163,12 +204,13 @@ const updateAuthorBlog = async (req, res) =>{
         return res.status(403).json({"message": "Blog update failed!!!"})
 
     }catch(ex){
-        console.log(ex)
+        blogLogger.error(ex.stack)
         return res.status(500).json({"message": "An Error Occured in the Server"})
     }
 }
 
 
+// IMPLEMENTED
 // This is to allow an author to delete the Blog created by the Author alone
 const deleteAuthorBlog = async (req, res) =>{
     try{
@@ -185,7 +227,7 @@ const deleteAuthorBlog = async (req, res) =>{
         return res.status(403).json({"message": "Blog deletion failed!!!"})
 
     }catch(ex){
-        console.log(ex)
+        blogLogger.error(ex.stack)
         return res.status(500).json({"message": "An Error Occured in the Server"})
     }
 }
@@ -197,6 +239,7 @@ module.exports = {
     getAllBlogsByAuthorId,
     getPublishedBlogs,
     getAPublishedBlogById,
+    searchPublishedBlogs,
     updateAuthorBlog,
     publishABlog,
     deleteAuthorBlog

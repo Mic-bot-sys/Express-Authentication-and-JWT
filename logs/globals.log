@@ -1,0 +1,204 @@
+{
+  message: 'Server running on localhost://127.0.0.1:8000',
+  level: 'info',
+  service: 'GlobalService',
+  timestamp: '2024-05-21T10:57:16.584Z'
+}
+{
+  message: 'Server running on localhost://127.0.0.1:8000',
+  level: 'info',
+  service: 'GlobalService',
+  timestamp: '2024-05-21T10:58:14.396Z'
+}
+{
+  message: 'Server running on localhost://127.0.0.1:8000',
+  level: 'info',
+  service: 'GlobalService',
+  timestamp: '2024-05-21T10:58:47.141Z'
+}
+{
+  message: 'Server running on localhost://127.0.0.1:8000',
+  level: 'info',
+  service: 'GlobalService',
+  timestamp: '2024-05-21T10:58:49.517Z'
+}
+{
+  message: 'Server running on localhost://127.0.0.1:8000',
+  level: 'info',
+  service: 'GlobalService',
+  timestamp: '2024-05-21T10:59:10.930Z'
+}
+{
+  message: 'Server running on localhost://127.0.0.1:8000',
+  level: 'info',
+  service: 'GlobalService',
+  timestamp: '2024-05-21T11:10:46.340Z'
+}
+{
+  message: 'Server running on localhost://127.0.0.1:8000',
+  level: 'info',
+  service: 'GlobalService',
+  timestamp: '2024-05-21T11:10:58.394Z'
+}
+{
+  message: 'Server running on localhost://127.0.0.1:8000',
+  level: 'info',
+  service: 'GlobalService',
+  timestamp: '2024-05-21T11:11:43.912Z'
+}
+{
+  message: 'Server running on localhost://127.0.0.1:8000',
+  level: 'info',
+  service: 'GlobalService',
+  timestamp: '2024-05-21T11:12:13.835Z'
+}
+{
+  message: 'Server running on localhost://127.0.0.1:8000',
+  level: 'info',
+  service: 'GlobalService',
+  timestamp: '2024-05-21T11:13:16.276Z'
+}
+{
+  message: 'Server running on localhost://127.0.0.1:8000',
+  level: 'info',
+  service: 'GlobalService',
+  timestamp: '2024-05-21T11:13:24.242Z'
+}
+{
+  message: 'Server running on localhost://127.0.0.1:8000',
+  level: 'info',
+  service: 'GlobalService',
+  timestamp: '2024-05-21T11:13:42.072Z'
+}
+{
+  message: 'Server running on localhost://127.0.0.1:8000',
+  level: 'info',
+  service: 'GlobalService',
+  timestamp: '2024-05-21T11:13:53.831Z'
+}
+{
+  message: 'Server running on localhost://127.0.0.1:8000',
+  level: 'info',
+  service: 'GlobalService',
+  timestamp: '2024-05-21T11:14:03.635Z'
+}
+{
+  message: 'Server running on localhost://127.0.0.1:8000',
+  level: 'info',
+  service: 'GlobalService',
+  timestamp: '2024-05-21T11:14:11.239Z'
+}
+{
+  message: 'Server running on localhost://127.0.0.1:8000',
+  level: 'info',
+  service: 'GlobalService',
+  timestamp: '2024-05-21T11:14:15.238Z'
+}
+{
+  message: 'Server running on localhost://127.0.0.1:8000',
+  level: 'info',
+  service: 'GlobalService',
+  timestamp: '2024-05-21T11:14:26.188Z'
+}
+{
+  message: 'Server running on localhost://127.0.0.1:8000',
+  level: 'info',
+  service: 'GlobalService',
+  timestamp: '2024-05-21T11:14:58.372Z'
+}
+{
+  message: 'Server running on localhost://127.0.0.1:8000',
+  level: 'info',
+  service: 'GlobalService',
+  timestamp: '2024-05-21T11:15:03.432Z'
+}
+{
+  message: 'Server running on localhost://127.0.0.1:8000',
+  level: 'info',
+  service: 'GlobalService',
+  timestamp: '2024-05-21T11:15:09.532Z'
+}
+{
+  message: 'Server running on localhost://127.0.0.1:8000',
+  level: 'info',
+  service: 'GlobalService',
+  timestamp: '2024-05-21T11:15:33.461Z'
+}
+{
+  message: 'Server running on localhost://127.0.0.1:8000',
+  level: 'info',
+  service: 'GlobalService',
+  timestamp: '2024-05-21T11:16:16.950Z'
+}
+{
+  message: 'Server running on localhost://127.0.0.1:8000',
+  level: 'info',
+  service: 'GlobalService',
+  timestamp: '2024-05-21T11:16:32.024Z'
+}
+{
+  message: 'Server running on localhost://127.0.0.1:8000',
+  level: 'info',
+  service: 'GlobalService',
+  timestamp: '2024-05-21T11:16:49.128Z'
+}
+{
+  message: 'Server running on localhost://127.0.0.1:8000',
+  level: 'info',
+  service: 'GlobalService',
+  timestamp: '2024-05-21T11:19:05.343Z'
+}
+{
+  message: 'Server running on localhost://127.0.0.1:8000',
+  level: 'info',
+  service: 'GlobalService',
+  timestamp: '2024-05-21T11:19:12.314Z'
+}
+{
+  message: 'Server running on localhost://127.0.0.1:8000',
+  level: 'info',
+  service: 'GlobalService',
+  timestamp: '2024-05-21T11:19:22.114Z'
+}
+{
+  message: 'Server running on localhost://127.0.0.1:8000',
+  level: 'info',
+  service: 'GlobalService',
+  timestamp: '2024-05-21T11:19:25.690Z'
+}
+{
+  message: 'Server running on localhost://127.0.0.1:8000',
+  level: 'info',
+  service: 'GlobalService',
+  timestamp: '2024-05-21T11:22:16.338Z'
+}
+{
+  message: 'Server running on localhost://127.0.0.1:8000',
+  level: 'info',
+  service: 'GlobalService',
+  timestamp: '2024-05-21T11:22:26.183Z'
+}
+{
+  message: 'Server running on localhost://127.0.0.1:8000',
+  level: 'info',
+  service: 'GlobalService',
+  timestamp: '2024-05-21T11:22:30.924Z'
+}
+{
+  message: 'Server running on localhost://127.0.0.1:8000',
+  level: 'info',
+  service: 'GlobalService',
+  timestamp: '2024-05-21T11:22:33.481Z'
+}
+{
+  message: 'Server running on localhost://127.0.0.1:8000',
+  level: 'info',
+  service: 'GlobalService',
+  timestamp: '2024-05-21T11:22:48.748Z'
+}
+{
+  message: 'Server running on localhost://127.0.0.1:8000',
+  level: 'info',
+  service: 'GlobalService',
+  timestamp: '2024-05-21T11:22:53.834Z'
+}
