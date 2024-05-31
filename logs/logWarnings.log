@@ -458,3 +458,314 @@
   message: 'HTTP GET /v1/blog/get/published',
   timestamp: '2024-05-21T11:15:46.833Z'
 }
+{
+  meta: {
+    req: {
+      url: '/v1/blog/get/published',
+      headers: {
+        'user-agent': 'PostmanRuntime/7.37.3',
+        accept: '*/*',
+        'postman-token': 'd7d67a55-6cba-49d0-a258-4af683f40862',
+        host: 'localhost:8000',
+        'accept-encoding': 'gzip, deflate, br',
+        connection: 'keep-alive'
+      },
+      method: 'GET',
+      httpVersion: '1.1',
+      originalUrl: '/v1/blog/get/published',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 10024
+  },
+  level: 'error',
+  message: 'HTTP GET /v1/blog/get/published',
+  timestamp: '2024-05-28T16:41:26.396Z'
+}
+{
+  meta: {
+    req: {
+      url: '/v1/blog/create',
+      headers: {
+        'content-type': 'application/json',
+        authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY2NDYyMzliOGQ1OGJlNzE3MjRmOTNkYiIsImVtYWlsIjoidmljYmVlZUBnbWFpbC5jb20ifSwiaWF0IjoxNzE1OTMzNTU5fQ.2YTcsY0jXcuHs4bxNvy275PweAyRgudu5xioE-XfCVE',
+        'user-agent': 'PostmanRuntime/7.37.3',
+        accept: '*/*',
+        'postman-token': '99c1b45d-6cbe-48c2-bde0-d1a7965663ae',
+        host: '127.0.0.1:8000',
+        'accept-encoding': 'gzip, deflate, br',
+        connection: 'keep-alive',
+        'content-length': '330'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/v1/blog/create',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 10100
+  },
+  level: 'error',
+  message: 'HTTP POST /v1/blog/create',
+  timestamp: '2024-05-28T16:41:56.422Z'
+}
+{
+  meta: {
+    req: {
+      url: '/v1/user/login',
+      headers: {
+        'user-agent': 'PostmanRuntime/7.37.3',
+        accept: '*/*',
+        'postman-token': 'b016397b-3f62-4a9e-9691-73c5846c5ca1',
+        host: 'localhost:8000',
+        'accept-encoding': 'gzip, deflate, br',
+        connection: 'keep-alive',
+        'content-type': 'multipart/form-data; boundary=--------------------------665533426138743542891691',
+        'content-length': '517'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/v1/user/login',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 10010
+  },
+  level: 'error',
+  message: 'HTTP POST /v1/user/login',
+  timestamp: '2024-05-28T16:42:42.595Z'
+}
+{
+  meta: {
+    req: {
+      url: '/v1/user/login',
+      headers: {
+        'user-agent': 'PostmanRuntime/7.37.3',
+        accept: '*/*',
+        'postman-token': '6c2fef7e-39a7-4661-9856-3bcf0c33e775',
+        host: 'localhost:8000',
+        'accept-encoding': 'gzip, deflate, br',
+        connection: 'keep-alive',
+        'content-type': 'multipart/form-data; boundary=--------------------------856561660150195523878327',
+        'content-length': '517'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/v1/user/login',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 28319
+  },
+  level: 'error',
+  message: 'HTTP POST /v1/user/login',
+  timestamp: '2024-05-28T16:44:03.138Z'
+}
+{
+  meta: {
+    req: {
+      url: '/v1/user/create',
+      headers: {
+        'user-agent': 'PostmanRuntime/7.37.3',
+        accept: '*/*',
+        'postman-token': '43bbf294-a556-4730-88a8-852fe9560c11',
+        host: 'localhost:8000',
+        'accept-encoding': 'gzip, deflate, br',
+        connection: 'keep-alive',
+        'content-type': 'multipart/form-data; boundary=--------------------------243747598274694721050482',
+        'content-length': '517'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/v1/user/create',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 23870
+  },
+  level: 'error',
+  message: 'HTTP POST /v1/user/create',
+  timestamp: '2024-05-28T16:45:01.464Z'
+}
+{
+  meta: {
+    req: {
+      url: '/v1/user/create',
+      headers: {
+        'user-agent': 'PostmanRuntime/7.37.3',
+        accept: '*/*',
+        'postman-token': '1d54902c-6917-46b2-82f0-9b0e5c995bc2',
+        host: 'localhost:8000',
+        'accept-encoding': 'gzip, deflate, br',
+        connection: 'keep-alive',
+        'content-type': 'multipart/form-data; boundary=--------------------------846032873050884105325142',
+        'content-length': '517'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/v1/user/create',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 54032
+  },
+  level: 'error',
+  message: 'HTTP POST /v1/user/create',
+  timestamp: '2024-05-28T16:46:22.709Z'
+}
+{
+  meta: {
+    req: {
+      url: '/v1/user/create',
+      headers: {
+        'user-agent': 'PostmanRuntime/7.37.3',
+        accept: '*/*',
+        'postman-token': '5c10f58e-b9c5-4bf7-8a7c-a59c672f8076',
+        host: 'localhost:8000',
+        'accept-encoding': 'gzip, deflate, br',
+        connection: 'keep-alive',
+        'content-type': 'multipart/form-data; boundary=--------------------------202320250257026275895521',
+        'content-length': '517'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/v1/user/create',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 46626
+  },
+  level: 'error',
+  message: 'HTTP POST /v1/user/create',
+  timestamp: '2024-05-28T16:53:16.464Z'
+}
+{
+  meta: {
+    req: {
+      url: '/v1/user/create',
+      headers: {
+        'user-agent': 'PostmanRuntime/7.37.3',
+        accept: '*/*',
+        'postman-token': '066f811b-781f-4a09-9786-113920589e1f',
+        host: 'localhost:8000',
+        'accept-encoding': 'gzip, deflate, br',
+        connection: 'keep-alive',
+        'content-type': 'multipart/form-data; boundary=--------------------------627053333416509720731259',
+        'content-length': '517'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/v1/user/create',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 17044
+  },
+  level: 'error',
+  message: 'HTTP POST /v1/user/create',
+  timestamp: '2024-05-28T16:55:58.454Z'
+}
+{
+  meta: {
+    req: {
+      url: '/v1/user/create',
+      headers: {
+        'user-agent': 'PostmanRuntime/7.37.3',
+        accept: '*/*',
+        'postman-token': 'e24cf417-67f2-4641-bb76-2c3a0128a2cc',
+        host: 'localhost:8000',
+        'accept-encoding': 'gzip, deflate, br',
+        connection: 'keep-alive',
+        'content-type': 'multipart/form-data; boundary=--------------------------758763754325519424812100',
+        'content-length': '517'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/v1/user/create',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 20933
+  },
+  level: 'error',
+  message: 'HTTP POST /v1/user/create',
+  timestamp: '2024-05-28T17:02:58.486Z'
+}
+{
+  meta: {
+    req: {
+      url: '/v1/user/create',
+      headers: {
+        'user-agent': 'PostmanRuntime/7.37.3',
+        accept: '*/*',
+        'postman-token': 'dcc9a64c-afb5-41eb-9288-5e07e3981d0e',
+        host: 'localhost:8000',
+        'accept-encoding': 'gzip, deflate, br',
+        connection: 'keep-alive',
+        'content-type': 'multipart/form-data; boundary=--------------------------573224201796153658301301',
+        'content-length': '517'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/v1/user/create',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 10257
+  },
+  level: 'error',
+  message: 'HTTP POST /v1/user/create',
+  timestamp: '2024-05-28T17:24:45.143Z'
+}
+{
+  meta: {
+    req: {
+      url: '/v1/user/create',
+      headers: {
+        'user-agent': 'PostmanRuntime/7.37.3',
+        accept: '*/*',
+        'postman-token': '545483a2-e76c-4e71-9d52-9426955af826',
+        host: 'localhost:8000',
+        'accept-encoding': 'gzip, deflate, br',
+        connection: 'keep-alive',
+        'content-type': 'multipart/form-data; boundary=--------------------------940691110345543226574525',
+        'content-length': '517'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/v1/user/create',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 10416
+  },
+  level: 'error',
+  message: 'HTTP POST /v1/user/create',
+  timestamp: '2024-05-28T17:35:27.875Z'
+}
+{
+  meta: {
+    req: {
+      url: '/v1/user/create',
+      headers: {
+        'user-agent': 'PostmanRuntime/7.37.3',
+        accept: '*/*',
+        'postman-token': 'a963d4a1-d8f7-4d9e-b12a-410c80dba2af',
+        host: 'localhost:8000',
+        'accept-encoding': 'gzip, deflate, br',
+        connection: 'keep-alive',
+        'content-type': 'multipart/form-data; boundary=--------------------------364335378573414341716371',
+        'content-length': '517'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/v1/user/create',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 38812
+  },
+  level: 'error',
+  message: 'HTTP POST /v1/user/create',
+  timestamp: '2024-05-28T17:36:43.029Z'
+}

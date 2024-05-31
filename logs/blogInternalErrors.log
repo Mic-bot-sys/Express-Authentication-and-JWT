@@ -22,3 +22,21 @@
   service: 'BlogService',
   timestamp: '2024-05-21T11:15:20.374Z'
 }
+{
+  message: 'MongooseError: Operation `blogs.find()` buffering timed out after 10000ms\n' +
+    '    at Timeout.<anonymous> (C:\\Development\\repos\\NODE\\BACKEND\\blogapi\\node_modules\\mongoose\\lib\\drivers\\node-mongodb-native\\collection.js:186:23)\n' +
+    '    at listOnTimeout (node:internal/timers:573:17)\n' +
+    '    at process.processTimers (node:internal/timers:514:7)',
+  level: 'error',
+  service: 'BlogService',
+  timestamp: '2024-05-28T16:41:26.371Z'
+}
+{
+  message: 'MongooseError: Operation `blogs.insertOne()` buffering timed out after 10000ms\n' +
+    '    at Timeout.<anonymous> (C:\\Development\\repos\\NODE\\BACKEND\\blogapi\\node_modules\\mongoose\\lib\\drivers\\node-mongodb-native\\collection.js:186:23)\n' +
+    '    at listOnTimeout (node:internal/timers:573:17)\n' +
+    '    at process.processTimers (node:internal/timers:514:7)',
+  level: 'error',
+  service: 'BlogService',
+  timestamp: '2024-05-28T16:41:56.420Z'
+}
